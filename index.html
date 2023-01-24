@@ -15,18 +15,31 @@
             <form id="city-search">
                 <input class="box" type="search" placeholder="Search City" autocomplete="off" id="search-text-input" />
                 <input type="submit" value="Search" />
-              </form>
-              <button id="current-location">Current</button>
+                <button id="current-location">Current</button>
+              </form>        
   <div class="row">
     <div class="col-4">
+        <small>
             <ul>
                 <li>
                     Wind : 10k/h
                 </li>
                 <li>
-                    Humidity : 80:
+                    Humidity : 80%
                 </li>
             </ul>
+        </small>
+        </div>
+        <div class="col-4">
+            <div class="temperature-display">
+            <div class="d-flex weather-temperature">
+            <img src="image/sunny.cloudy.png"> 
+           <div>  
+           <strong id="temperature">28</strong>
+           <span class="units">°C | <a href="#">°F</a></span>
+        </div>
+        </div>
+         </div>
         </div>
         <div class="col-4">
             <ul>
@@ -40,10 +53,7 @@
                     Clear with periodic clouds
                 </li>
             </ul>
-        </div>
-        <div class="col-4">
-           <img src="image/sunny.cloudy.png"> 28 °C | °F
-        </div>
+        </div>   
         </div>
         </div>
     </div>
@@ -52,10 +62,10 @@
         <div class="card-body">
             <div class="row">
                 <div class="col">
-                    Fri
+               Fri
                  <img src="image/sunny.cloudy.png">
                  31°/23°
-                    </div>
+                </div>
                      <div class="col">
                     Sat
                     <img src="image/sunny.cloudy.png">
@@ -68,12 +78,12 @@
                     </div>
                        <div class="col">
                     Mon
-                    <img src="image/sunny.png">
+                    <img src="image/sunny.png" width="64px" height="64px">
                     32°/23°
                     </div>
                     <div class="col">
                      Tue
-                     <img src="image/sunny.png">
+                     <img src="image/sunny.png" width="64px" height="64px">
                     32°/23°
                     </div>
     </div>

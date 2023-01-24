@@ -1,7 +1,81 @@
+body {
+  font-family: Google Sans,arial,sans-serif;
+  background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/326/original/background.gif?1674601016) no-repeat;
+  background-size: cover;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li{
+  list-style: none;
+  color: rgb(46, 45, 45);
+  margin: 0;
+  padding: 0;
+
+}
+h1{
+font-size: 28px;
+font-weight: 500;
+line-height: 28px;
+color: rgb(46, 45, 45);;
+}
+footer{
+  font-size: small;
+  margin-top: 15px;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+img{
+  display: block;
+}
+input::placeholder {
+  text-align: center;
+}
 .container {
     margin: 100px auto;
     max-width: 50%;
   }
+  .box {
+    border-radius: 10px;
+  }
+  .card {
+    background: rgba(116, 124, 240, 0.4);
+  }
+  .card-body{
+    padding: 25px;
+    border: 1.5px solid rgb(125, 130, 194);
+  }
+  .temperature-display{
+    margin-top: 15px;
+  }
+  .temperature-display img{
+    margin-right: 5px;
+  }
+  .temperature-display strong { 
+    color: rgb(9, 9, 51);
+    font-size: 42px;
+    font-weight: 400;
+  }
+  .temperature-display .units{
+position: relative;
+font-size: 14px;
+top: -22px;
+  }
+  .col {
+    padding-bottom: 15px;
+  }
+
   #other-days{
     margin-top: 15px;
   }
+  
