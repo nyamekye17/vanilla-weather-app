@@ -52,8 +52,10 @@ input::placeholder {
     margin-top: 100px;
   }
   .box {
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-right: 20px;
   }
+  
   .card {
     background: rgba(116, 124, 240, 0.4);
   }

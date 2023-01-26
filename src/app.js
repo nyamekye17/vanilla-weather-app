@@ -35,8 +35,17 @@ iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data
 iconElement.setAttribute("alt", response.data.weather[0].description); 
 }
 
+function searchCity(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text-input");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML= `cityInputElement.value`
+
 let apiKey = "e97ae5d675e4c0ea5fe7521c6da29471";
-let city = "Accra"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInputElement.value}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature)
+
+}
+let search= document.querySelector("#city-search");
+search.addEventListener("submit", searchCity)
