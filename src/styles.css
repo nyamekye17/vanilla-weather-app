@@ -15,13 +15,12 @@ li{
   color: rgb(46, 45, 45);
   margin: 0;
   padding: 0;
-
-
 }
 
-li ::first-letter{
+li:first-letter{
   text-transform: capitalize;
 }
+
 
 h1{
 font-size: 28px;
