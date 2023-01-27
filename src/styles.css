@@ -34,12 +34,13 @@ footer{
 }
 a{
   text-decoration: none;
+}
+.github-link :hover {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 }
-a:hover {
-  text-decoration: underline;
-  color: black;
-}
+
 img{
   display: block;
 }
@@ -98,4 +99,10 @@ top: -22px;
   #search-detail{
     margin-top: -5px;
   }
-  
+  .weather-temperature .active{
+color: black;
+cursor: default;
+  }
+  .weather-temperature .active:hover{
+    text-decoration: none;
+  }

@@ -18,8 +18,10 @@ function formatDate(timestamp){
    } 
 
 function displayTemperature(response){
+  event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    celsiusTemperature=response.data.main.temp
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
     let descriptionElement = document.querySelector("#description");
@@ -35,17 +37,45 @@ iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data
 iconElement.setAttribute("alt", response.data.weather[0].description); 
 }
 
-function searchCity(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#search-text-input");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML= `cityInputElement.value`
-
+function searchCity(city) {
 let apiKey = "e97ae5d675e4c0ea5fe7521c6da29471";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInputElement.value}&appid=${apiKey}&units=metric`;
-
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature)
 
 }
+
+function handleSubmit(event){
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text-input");
+searchCity(cityInputElement.value);
+}
+function displayFahrenheitTemperature(event){
+event.preventDefault();
+celsiusElement.classList.remove("active");
+fahrenheitElement.classList.add("active")
+let temperatureElement = document.querySelector("#temperature");
+let fahrenheitTemperature= (celsiusTemperature * 9/5) + 32
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
+}
+
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  celsiusElement.classList.add("active");
+fahrenheitElement.classList.remove("active")
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML =Math.round(celsiusTemperature);
+
+}
+
+let celsiusTemperature=null;
+
 let search= document.querySelector("#city-search");
-search.addEventListener("submit", searchCity)
+search.addEventListener("submit", handleSubmit);
+
+let fahrenheitElement = document.querySelector("#fahrenheit-link");
+fahrenheitElement.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusElement = document.querySelector("#celsius-link");
+celsiusElement.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Accra");
