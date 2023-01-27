@@ -15,6 +15,7 @@ li{
   color: rgb(46, 45, 45);
   margin: 0;
   padding: 0;
+  spac
 }
 
 li:first-letter{
@@ -26,7 +27,8 @@ h1{
 font-size: 28px;
 font-weight: 500;
 line-height: 28px;
-color: rgb(46, 45, 45);;
+color: rgb(46, 45, 45);
+margin-left: 100px;
 }
 footer{
   font-size: small;
@@ -93,16 +95,21 @@ top: -22px;
   height: 54px;
 }
 
+.weather-temperature .active{
+  color: black;
+  cursor: default;
+    }
+    .weather-temperature .active:hover{
+      text-decoration: none;
+    }
+
   #other-days{
     margin-top: 15px;
   }
   #search-detail{
     margin-top: -5px;
   }
-  .weather-temperature .active{
-color: black;
-cursor: default;
-  }
-  .weather-temperature .active:hover{
-    text-decoration: none;
+  #description{
+margin-left: 100px;
+margin-top: -5px;
   }
