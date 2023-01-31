@@ -85,15 +85,26 @@ top: -22px;
     padding-bottom: 15px;
   }
 .predictions{
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
+  color: rgb(46, 45, 45);
+  font-weight: 500;
+ 
 }
 .image-prediction{
   margin: 0 auto;
   width: 54px;
   height: 54px;
 }
-
+.weather-forecast-temperature{
+  font-size: 14px;
+}
+.weather-forecast-min{
+  opacity: 0.5;
+}
+.weather-forecast-date{
+  opacity: 0.6;
+}
 .weather-temperature .active{
   color: black;
   cursor: default;
