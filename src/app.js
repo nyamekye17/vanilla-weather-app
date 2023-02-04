@@ -17,7 +17,9 @@ function formatDate(timestamp){
    
    } 
 
-   function displayForecast(){
+   function displayForecast(response){
+    console.log(response.data.daily);
+
     let forecastElement =document.querySelector("#forecast");
     let days = ["Fri", "Sat",  "Sun", "Mon", "Tue", "Wed"]; 
     let forecastHTML = `<div class="row">`;
@@ -40,6 +42,14 @@ function formatDate(timestamp){
 
     forecastElement.innerHTML = forecastHTML;
    }
+   
+   function getForecast(coordinates){
+    console.log(coordinates);
+    let apiKey = "4f0a4d1c93b046bb93530ef7o3ded40t";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+
+  }
 
 function displayTemperature(response){
   event.preventDefault();
@@ -59,6 +69,8 @@ function displayTemperature(response){
     iconElement = document.querySelector("#icon"); 
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 iconElement.setAttribute("alt", response.data.weather[0].description); 
+
+getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -103,4 +115,3 @@ let celsiusElement = document.querySelector("#celsius-link");
 celsiusElement.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Accra");
-displayForecast();
