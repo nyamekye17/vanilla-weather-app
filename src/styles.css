@@ -91,10 +91,10 @@ top: -22px;
   font-weight: 500;
  
 }
-.image-prediction{
+.image-forecast{
   margin: 0 auto;
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
 }
 .weather-forecast-temperature{
   font-size: 14px;
