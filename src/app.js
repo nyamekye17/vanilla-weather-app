@@ -55,7 +55,6 @@ function formatDate(timestamp){
    }
    
    function getForecast(coordinates){
-    console.log(coordinates);
     let apiKey = "4f0a4d1c93b046bb93530ef7o3ded40t";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
@@ -96,33 +95,10 @@ function handleSubmit(event){
   let cityInputElement = document.querySelector("#search-text-input");
 searchCity(cityInputElement.value);
 }
-function displayFahrenheitTemperature(event){
-event.preventDefault();
-celsiusElement.classList.remove("active");
-fahrenheitElement.classList.add("active")
-let temperatureElement = document.querySelector("#temperature");
-let fahrenheitTemperature= (celsiusTemperature * 9/5) + 32
-temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
-}
 
-function displayCelsiusTemperature(event){
-  event.preventDefault();
-  celsiusElement.classList.add("active");
-fahrenheitElement.classList.remove("active")
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML =Math.round(celsiusTemperature);
-
-}
-
-let celsiusTemperature=null;
 
 let search= document.querySelector("#city-search");
 search.addEventListener("submit", handleSubmit);
 
-let fahrenheitElement = document.querySelector("#fahrenheit-link");
-fahrenheitElement.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusElement = document.querySelector("#celsius-link");
-celsiusElement.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Accra");

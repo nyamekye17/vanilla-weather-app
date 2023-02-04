@@ -105,13 +105,6 @@ top: -22px;
 .weather-forecast-date{
   opacity: 0.6;
 }
-.weather-temperature .active{
-  color: black;
-  cursor: default;
-    }
-    .weather-temperature .active:hover{
-      text-decoration: none;
-    }
 
   #other-days{
     margin-top: 15px;
