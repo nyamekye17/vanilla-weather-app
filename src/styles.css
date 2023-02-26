@@ -116,3 +116,28 @@ top: -22px;
 margin-left: 100px;
 margin-top: -5px;
   }
+@media(max-width: 576px){
+  .container{
+    max-width: 100%;
+  }
+  .btn{
+    margin-top: 5px;
+  }
+  #search-detail{
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+  #city{
+    font-size: 24px;
+    display: flex;
+    margin-left: -3px;
+  }
+  #description{
+    display: flex;
+    margin-left: -3px;
+  }
+  .temperature-display{
+    margin-left: -3px;
+  }
+}

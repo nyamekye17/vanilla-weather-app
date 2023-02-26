@@ -35,7 +35,7 @@ function formatDate(timestamp){
     forecast.forEach(function (forecastDay, index) {
       if (index === 1 || index === 2 || index === 3 || index === 4 || index === 5 ||index === 6 ) {
       forecastHTML =  forecastHTML + `
-      <div class="col-2">
+      <div class="col-4 col-sm-2">
           <div class="weather-forecast-date">
      ${formatDay(forecastDay.time)}
   </div>
